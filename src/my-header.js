@@ -17,8 +17,7 @@ class MyHeader extends HTMLElement {
           align-items: center;
           padding: 1rem;
           margin: 1rem;
-          background-color: RoyalBlue; 
-        }
+          }
 
         h1 {
           margin: 0;
