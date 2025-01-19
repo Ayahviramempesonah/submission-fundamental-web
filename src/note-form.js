@@ -15,15 +15,17 @@ class NoteForm extends HTMLElement {
       <style>
         /* Gaya untuk formulir */
         .note-form {
-        // background-color:E8F9FF;
+        font-size:46px;
+          width:100%;
+          height:auto;
           display: flex;
            flex-direction: column;
           gap: 1rem;
-          // padding: 1rem;
-          // margin:1rem:
+           padding: 0;
+           margin:0:
           font-family: "Kaushan Script", serif;
-  font-weight: 800;
-  font-style: normal;
+          font-weight: 800;
+          font-style: normal;
          
 
         }
@@ -32,8 +34,8 @@ class NoteForm extends HTMLElement {
           display: flex;
           flex-direction: column;
           font-family: "Kaushan Script", serif;
-  font-weight: 400;
-  font-style: normal;
+          font-weight: 400;
+          font-style: normal;
 
         }
 
@@ -41,11 +43,23 @@ class NoteForm extends HTMLElement {
         font-family: "Kaushan Script", serif;
   font-weight: 400;
   font-style: normal;
+  height:3rem;
+
         }
 
         label {
+        color:white;
           font-weight: bold;
         }
+          textarea {
+          height:7rem;
+}
+
+        input{
+        height:5rem;
+        }
+
+
 
         /* Gaya untuk daftar catatan */
         .list-container {
