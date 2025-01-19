@@ -44,6 +44,7 @@ class NoteForm extends HTMLElement {
   font-weight: 400;
   font-style: normal;
   height:3rem;
+  font-size:2rem
 
         }
 
