@@ -17,6 +17,7 @@ class MyHeader extends HTMLElement {
            align-items: center;
           padding: 1rem;
           margin: 1rem;
+           overflow:hidden;
           
     
           
@@ -51,9 +52,9 @@ class MyHeader extends HTMLElement {
       <hr/>
       <nav>
         <ul>
-          <li><a href="#">Home</a></li>
+          
           <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+          
         </ul>
       </nav>
     `;

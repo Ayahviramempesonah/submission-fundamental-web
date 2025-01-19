@@ -64,16 +64,30 @@ class NoteForm extends HTMLElement {
 
 
         /* Gaya untuk daftar catatan */
-        .list-container {
-          margin-top: 1rem; 
-          display:grid;
-          grid-template-columns:repeat(2,1fr);
-          gap:1rem;
-          font-family: "Kaushan Script", serif;
+      .list-container {
+  margin-top: 1rem;
+  display: grid;
+  gap: 1rem;
+  font-family: "Kaushan Script", serif;
   font-weight: 400;
   font-style: normal;
-        }
+  overflow-y: auto;
 
+  /* Untuk layar kecil (misalnya, ponsel) */
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /* Untuk layar sedang (misalnya, tablet) */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Untuk layar besar (misalnya, desktop) */
+  @media (min-width: 1025px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
        
         .note {
           border: 1px solid #ccc;
@@ -109,8 +123,8 @@ class NoteForm extends HTMLElement {
       const bodyElement = document.createElement('p');
       bodyElement.textContent = note.body;
 
-      noteElement.appendChild(titleElement);
-      noteElement.appendChild(bodyElement);
+      noteElement.append(titleElement);
+      noteElement.append(bodyElement);
 
       return noteElement;
     };
