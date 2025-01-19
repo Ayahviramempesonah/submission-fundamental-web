@@ -136,6 +136,7 @@ class NoteForm extends HTMLElement {
       };
 
       notes.push(newNote);
+      alert('data berhasil ditambahkan');
 
       // Render the updated list
       listContainer.innerHTML = ''; // Clear existing notes

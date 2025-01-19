@@ -14,9 +14,13 @@ class MyHeader extends HTMLElement {
         :host {
           display: flex;
           justify-content: space-between;
-          align-items: center;
+           align-items: center;
           padding: 1rem;
           margin: 1rem;
+          
+    
+          
+          
           }
 
         h1 {
@@ -44,6 +48,7 @@ class MyHeader extends HTMLElement {
       </style>
 
       <h1>NotedApp</h1>
+      <hr/>
       <nav>
         <ul>
           <li><a href="#">Home</a></li>
