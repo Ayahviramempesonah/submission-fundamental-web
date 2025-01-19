@@ -53,7 +53,7 @@ class MyHeader extends HTMLElement {
       <nav>
         <ul>
           
-          <li><a href="#">About</a></li>
+          <li><a href="https://github.com/Ayahviramempesonah">About</a></li>
           
         </ul>
       </nav>

@@ -14,7 +14,7 @@ render(){
     color:#fff;
     padding:1rem;
     text-align:center;
-    margin:1rem;
+    margin:0;
     }
     </style>
 
