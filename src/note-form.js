@@ -15,14 +15,14 @@ class NoteForm extends HTMLElement {
       <style>
         /* Gaya untuk formulir */
         .note-form {
-        background-color:E8F9FF;
+        // background-color:E8F9FF;
           display: flex;
-          flex-direction: column;
+           flex-direction: column;
           gap: 1rem;
-          padding: 1rem;
-          margin:1rem:
+          // padding: 1rem;
+          // margin:1rem:
           font-family: "Kaushan Script", serif;
-  font-weight: 400;
+  font-weight: 800;
   font-style: normal;
          
 
