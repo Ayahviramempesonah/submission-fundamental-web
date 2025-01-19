@@ -120,12 +120,19 @@ class NoteForm extends HTMLElement {
       const titleElement = document.createElement('h3');
       titleElement.textContent = note.title;
 
+      const id = document.createElement('p');
+      id.textContent=note.id;
+
+      const create = document.createElement('p');
+      create.textContent = note.createdAt;
+
       const bodyElement = document.createElement('p');
       bodyElement.textContent = note.body;
 
       noteElement.append(titleElement);
+      noteElement.append(id);
       noteElement.append(bodyElement);
-
+      noteElement.append(create);
       return noteElement;
     };
 
