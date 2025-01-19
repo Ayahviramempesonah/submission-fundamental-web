@@ -58,6 +58,7 @@ class NoteForm extends HTMLElement {
 
         input{
         height:5rem;
+        
         }
 
 
@@ -83,7 +84,9 @@ class NoteForm extends HTMLElement {
       <form class="note-form">
         <div class="form-group">
           <label for="title">Judul:</label>
-          <input type="text" id="title" name="title">
+          <input type="text" id="title" name="title" required  pattern="[a-zA-Z0-9\s]+" 
+          title="Judul hanya boleh mengandung huruf, angka, dan spasi."
+          >
         </div>
         <div class="form-group">
           <label for="body">Isi:</label>
