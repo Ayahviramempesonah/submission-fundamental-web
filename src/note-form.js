@@ -10,6 +10,21 @@ class NoteForm extends HTMLElement {
     this.render();
   }
 
+  //create custom attribute
+  static get observedAttributes(){
+    return ['note-id','note-title','note-body'];
+  }
+
+  attributeChangedCallback(name,oldValue,newValue){
+    if (name === 'note-id') {
+      console.log(`ID catatan: ${newValue}`);
+    }else if (name === 'note-title'){
+      console.log(`judul catatan: ${newValue}`);
+    }else if (name === 'note-body'){
+      console.log(`isi catatan: ${newValue}`);
+    }
+  }
+
   render() {
     this.shadowRoot.innerHTML = `
       <style>
@@ -22,7 +37,7 @@ class NoteForm extends HTMLElement {
            flex-direction: column;
           gap: 1rem;
            padding: 0;
-           margin:0:
+           margin:0;
           font-family: "Kaushan Script", serif;
           font-weight: 800;
           font-style: normal;
@@ -121,18 +136,26 @@ class NoteForm extends HTMLElement {
       titleElement.textContent = note.title;
 
       const id = document.createElement('p');
-      id.textContent=note.id;
+      id.textContent= `ID: ${note.id}`;
 
+      //pembuatan tanggal
       const create = document.createElement('p');
-      create.textContent = note.createdAt;
+create.textContent = `Dibuat Pada: ${new Date(note.createdAt).toLocaleDateString('id-ID', {
+    weekday: 'long', 
+    year: 'numeric',
+    month: 'long', 
+    day: 'numeric' 
+})}`;
+
 
       const bodyElement = document.createElement('p');
       bodyElement.textContent = note.body;
 
       noteElement.append(titleElement);
       noteElement.append(id);
-      noteElement.append(bodyElement);
       noteElement.append(create);
+      noteElement.append(bodyElement);
+      
       return noteElement;
     };
 
@@ -152,11 +175,11 @@ class NoteForm extends HTMLElement {
         id: crypto.randomUUID(),
         title: titleInput.value,
         body: bodyInput.value,
-        createdAt: new Date().toISOString(),
+        createdAt: new Date(),
         archived: false,
       };
 
-      notes.push(newNote);
+      notes.unshift(newNote);
       alert('data berhasil ditambahkan');
 
       // Render the updated list
@@ -174,5 +197,3 @@ class NoteForm extends HTMLElement {
 
 customElements.define('note-form', NoteForm);
 
-// Log the first note from the data.js file
-console.log(`hasil data ${notes[0].title}`);

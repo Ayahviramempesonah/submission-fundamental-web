@@ -48,7 +48,7 @@ class MyHeader extends HTMLElement {
         }
       </style>
 
-      <h1>NotedApp</h1>
+      <h1>NotesApp</h1>
       <hr/>
       <nav>
         <ul>
